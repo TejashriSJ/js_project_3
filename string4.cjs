@@ -1,25 +1,24 @@
 
-function string4(nameObject){
-    if(!nameObject || typeof nameObject !== 'object'){
+function string4(nameObject) {
+    if (!nameObject || typeof nameObject !== 'object') {
         return '';
-    }
-    else{
+    } else {
 
-        let nameValues=[];
-        for(let name in nameObject){
+        let nameValues = [];
+        for (let name in nameObject) {
             nameValues.push(nameObject[name].toLowerCase());
         }
 
         let titleCapital = '';
-        for (let index =0; index< nameValues.length ; index++){
-            let capitalizedName=''
+        for (let index = 0; index < nameValues.length; index++) {
+            let capitalizedName = ''
             capitalizedName += nameValues[index].charAt(0).toUpperCase()
             capitalizedName += nameValues[index].substring(1);
             titleCapital += capitalizedName;
             titleCapital += ' ';
 
         }
-        return titleCapital;   
-    } 
+        return titleCapital;
+    }
 }
 module.exports = string4;
